@@ -1,0 +1,158 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/*Declaración de variables*/
+/*Hemos creado en :root, es decir, en el alcance global de un código*/
+:root{ 
+    --color-primario: #000;
+    --color-secundario: #F6f6f6;
+    --color-terciario: #22d4fd;
+    --color-hover:#272727;
+
+    --fuente-krona: "Krona One", sans serif;
+    --fuente-montserrat: "Montserrat", sans serif;
+    }
+
+* {
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    box-sizing: border-box;
+    background-color:var(--color-primario);
+    color: var(--color-secundario);    
+}
+
+.header{
+    padding: 2% 0% 0% 15%;
+}
+
+.header__menu{
+    display: flex;
+    gap: 80px;
+}
+
+.header__menu__link{
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--color-terciario);
+    text-decoration: none;
+}
+
+.presentacion{
+    padding: 5% 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 82px;
+}
+
+.presentacion__contenido{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /*distancia entre botones*/
+}
+
+.presentacion__contenido_titulo{
+    font-size: 2rem;
+    font-family: var(--fuente-krona);
+    color: var(--color-terciario);
+}
+
+.titulo-resaltado{
+    color: var(--color-terciario);
+}
+
+.presentacion__contenido__texto{
+    font-size: 1.5rem;
+    font-family: var(--fuente-montserrat);
+    text-align: justify;
+}
+
+.presentacion__enlaces{
+    display: flex;
+    flex-direction: column; /*ubica los botones en columnas*/
+    justify-content: space-between;
+    align-items: center; /*Centra los botones*/
+    gap: 32px;  /*distancia entre botones*/
+}
+
+.presentacion__enlaces__subtitulo{
+    font-family: var(--fuente-krona);
+    font-weight: 400px;
+    font-size: 1.5rem;
+}
+
+.presentacion__enlaces__link{
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    border: 2px solid var(--color-terciario); /*border para añadir el borde alrededor de los botones. Esta propiedad se puede utilizar para definir los valores de ancho del borde, estilo del borde y color del borde, y tiene algunos estilos diferentes, como "dotted"*/
+    width: 50%;
+    text-align: center;
+    border-radius: 8px;/*redondear los botones*/
+    font-size: 1.5rem;
+    font-weight: 600px;
+    padding: 21.5px 0px;
+    text-decoration: none;
+    color: var(--color-secundario);
+    font-family: var(--fuente-montserrat);
+}
+
+.presentacion__enlaces__link:hover{ /*El hover se utiliza para seleccionar elementos cuando pasas el ratón sobre ellos*/
+    background-color: var(--color-hover); /*propiedad para cambiar el boton de color al pasar el cursor sobre el*/
+    padding: 2%;   
+}
+
+.presetacion__imagen{
+    width: 50%;
+}
+
+.curriculum{
+    display: flex;
+    align-items: center;
+    padding: 2% 7%;
+    justify-content: space-between;
+}
+
+.curriculum__contenido{
+    width: 615px;
+    display: flex;
+    flex-direction: column;
+    gap: 40px; /*distancia entre botones*/
+}
+
+.footer{
+    color: var(--color-primario);
+    background-color: var(--color-terciario);
+    padding:  1%;
+    text-align: center;
+    font-family: var(--fuente-montserrat);
+    font-size: 1.5rem;
+    font-weight: 400px;
+}
+
+@media (max-width: 1200px){ /*Con esta ropiedad se adaptapta nuestro sitio para diferentes tamaños de pantallaesta que esten por debajo de los 1200px*/
+   
+    .header{
+    padding: 10%;
+   }
+
+   .header__menu{
+    justify-content: center;
+   }
+   
+    .presentacion{
+        flex-direction: column-reverse; /*invierte y ubica todo el contenido en una columna para que se adapte a cualquie dispositivo*/
+    }
+
+    .presentacion__contenido{
+        width: auto;
+    }
+}
+
+
+
